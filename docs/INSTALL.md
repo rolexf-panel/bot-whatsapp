@@ -1,3 +1,5 @@
+docs/INSTALL.md
+md
 # INSTALL Guide
 
 ## Prerequisites
@@ -14,3 +16,28 @@
    ```js
    // Node snippet
    console.log(require('crypto').randomBytes(32).toString('base64'));
+Paste into ENCRYPTION_KEY.
+
+Install dependencies:
+
+cd server && npm ci
+
+cd client && npm ci
+
+Start dev:
+
+cd server && npm run dev
+
+cd client && npm run dev
+
+Pairing:
+
+Open http://localhost:5173 (or Pinggy URL) → / → scan QR.
+
+Production:
+
+Configure domain + TLS
+
+pm2 start pm2.config.js
+
+---
